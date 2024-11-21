@@ -1,0 +1,591 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style-type: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+a {
+    position: relative;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --bg-color: #282829;
+    --white-color: #FFFFFF;
+    --title-dark: #38535D;
+    --dark-color: #222222;
+}
+
+ul[class], ol[class] {
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    -webkit-box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--white-color);
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+    border-radius: 10px;
+    border: 3px solid var(--white-color); /* Оформление границ бегунка */
+}
+
+@font-face {
+	font-family: 'Prata';
+	src: url('../fonts/Prata-Regular.ttf') format('truetype');
+}
+
+html {
+    min-width: 320px;
+    margin: 0;
+    font-size: 1px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial';
+    background: var(--bg-color);
+    color: var(--white-color);
+    position: relative;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1610px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    font-size: 24rem;
+    line-height: 33.6rem;
+    text-align: left;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    width: 100%;
+    max-width: 189rem;
+    height: 94rem;
+    font-size: 24rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--dark-color);
+    border: 1rem solid var(--white-color);
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.btn.btn-dark {
+    background-color: var(--bg-color);
+    height: 100rem;
+    font-size: 24rem;
+    color: var(--white-color);
+    border-color: var(--bg-color);
+}
+
+.btn.btn-dark:hover {
+    background-color: var(--white-color);
+    color: var(--bg-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 115rem;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    z-index: 10;
+}
+
+header.scroll {
+    background-color: var(--dark-color);
+    border-bottom: 2px solid var(--white-color);
+}
+
+header .container {
+    height: 100%;
+}
+
+header .row {
+    height: 100%;
+    align-items: center;
+}
+
+header .logo {
+    height: 30rem;   
+}
+
+.navbar {
+    margin: 0 0 0 215rem;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 30rem;
+}
+
+.navbar ul a {
+    font-size: 16rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24rem;
+    letter-spacing: 0.04em;
+    
+}
+
+.navbar ul a::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    width: 0;
+    height: 2rem;
+    display: block;
+    background-color: var(--white-color);
+    transition: .3s;
+}
+
+.navbar ul a:hover::after {
+    width: 100%;
+}
+
+.main {
+    position: relative;
+    background-color: var(--dark-color);
+    padding: 320rem 0 50rem;
+}
+
+.main .row {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 5;
+}
+
+.main .main-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 39%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main .main-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main h1 {
+    font-family: 'Prata';
+    font-size: 80rem;
+    font-weight: 400;
+    line-height: 96rem;
+    text-align: left;
+    margin: 0 0 20rem;
+}
+
+.main h2 {
+    font-size: 50rem;
+    font-weight: 400;
+    line-height: 60rem;
+    text-align: left;
+    margin: 0 0 50rem;
+}
+
+.main .check-item + .check-item {
+    margin-top: 35rem;
+}
+
+.main .check-item {
+    display: flex;
+    align-items: center;
+}
+
+.main .check-item img {
+    width: 39rem;
+    margin: 0 17rem 0 0;
+}
+
+.main .check-item p {
+    font-size: 24rem;
+    font-weight: 400;
+    line-height: 26.4rem;
+}
+
+.main .btn {
+    margin: 40rem 0 0;
+    border-radius: 4rem;
+}
+
+.steps {
+    padding: 100rem 0 50rem;
+}
+
+.steps .steps-item.steps-item__image {
+    width: calc((100% - 714rem) / 2);
+    overflow: hidden;
+}
+
+.steps .steps-item.steps-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.steps .steps-item.steps-item__list {
+    width: 714rem;
+    padding: 0 50rem;
+}
+
+.steps .steps-item.steps-item__list .steps-box {
+    display: flex;
+    align-items: flex-start;
+    padding: 40rem 0;
+}
+
+.steps .steps-item.steps-item__list .steps-box img {
+    width: 58rem;
+    margin: 0 20rem 0 0;
+}
+
+.steps .steps-item.steps-item__list .steps-box p {
+    width: calc(100% - 78rem);
+}
+
+.steps .steps-item.steps-item__list .steps-box + .steps-box {
+    border-top: 1px solid #55565A;
+}
+
+.steps .steps-item.steps-item__list .btn {
+    max-width: 100%;
+    height: 76rem;
+    font-size: 20rem;
+    margin: 40rem auto 0;
+}
+
+.order {
+    padding: 50rem 0 100rem;
+}
+
+.order .form-box {
+    width: 100%;
+    background-color: var(--white-color);
+    display: flex;
+    border-radius: 30rem;
+    border: 2px solid #D5C9BE;
+    overflow: hidden;
+}
+
+.order .form-box .form-box__order {
+    width: 62%;
+    display: flex;
+    padding: 70rem 50rem;
+}
+
+.order .form-box .form-box__order form {
+    width: 100%;
+    max-width: 780rem;
+    margin: 0 0 0 auto;
+}
+
+.order .form-box .form-box__order form .form-title {
+    font-family: 'Prata';
+    font-size: 54rem;
+    font-weight: 400;
+    line-height: 59.4rem;
+    color: var(--title-dark);
+    text-align: left;
+    margin: 0 0 45rem;
+}
+
+.order .form-box .form-box__order form .form-input {
+    width: 100%;
+}
+
+.order .form-box .form-box__order form .form-input + .form-input {
+    margin-top: 13px;
+}
+
+.order .form-box .form-box__order form .form-input input {
+    width: 100%;
+    font-size: 24rem;
+    color: #55565A;
+    padding: 15rem 38rem;
+    border: 2px solid #D6D6D6;
+    outline: none;
+}
+
+.order .form-box .form-checkbox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 26px 0;
+}
+
+.order .form-box .form-checkbox input[type="checkbox"] {
+    accent-color: #405D65;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 4rem;
+    border: 2px solid #405D65;
+    cursor: pointer;
+}
+
+.order .form-box .form-checkbox label {
+    font-size: 19rem;
+    line-height: 1;
+    color: #55565A;
+    cursor: pointer;
+}
+
+.order .form-box form .btn {
+    max-width: 100%;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.order .form-box .form-box__image {
+    width: 38%;
+    overflow: hidden;
+}
+
+.order .form-box .form-box__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.footer-links {
+    background-color: var(--dark-color);
+    padding: 35rem 0;
+    border-top: 2px solid #D5C9BE;
+    border-bottom: 2px solid #D5C9BE;
+}
+
+.footer-links .row {
+    align-items: center;
+    justify-content: center;
+    gap: 60rem;
+}
+
+.footer-links .row a {
+    font-size: 20rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+}
+
+.footer-links .row a::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    width: 0;
+    height: 2rem;
+    display: block;
+    background-color: var(--white-color);
+    transition: .3s;
+}
+
+.footer-links .row a:hover::after {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--dark-color);
+    padding: 40rem 0 50rem;
+}
+
+footer .footer-top {
+    margin: 0 0 38rem;
+}
+
+footer .row {
+    justify-content: space-between;
+}
+
+footer .footer-top .row {
+    align-items: center;
+}
+
+footer .logo {
+    height: 50rem;
+}
+
+footer .socials {
+    display: flex;
+    align-items: center;
+    gap: 32rem;
+}
+
+footer .socials svg {
+    width: 32rem;
+}
+
+footer .socials svg path {
+    transition: .3s;
+}
+
+footer .socials svg:hover {
+    transition: .3s;
+    transform: scale(1.2);
+}
+
+footer .btn {
+    max-width: 178rem;
+    height: 76rem;
+    font-size: 20rem;
+    font-style: italic;
+}
+
+footer .footer-bottom p, footer .footer-bottom a {
+    font-size: 20rem;
+    line-height: 30rem;
+    color: #D5C9BE;
+}
+
+@media screen and (max-width: 1366px) {
+    html {
+        font-size: .7px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main .main-bg {
+        width: 100%;
+    }
+    .main .main-bg:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, .7);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        margin: 0 0 0 50rem;
+    }
+    .steps .row {
+        flex-direction: column;
+    }
+    .steps .steps-item.steps-item__image, .steps .steps-item.steps-item__list {
+        width: 100%;
+    }
+    .steps .steps-item.steps-item__list {
+        padding: 0 15px 30rem;
+    }
+    .order .form-box .form-box__image {
+        display: none;
+    }
+    .order .container {
+        padding: 0;
+    }
+    .order .form-box {
+        border-radius: 0;
+        border: none;
+    }
+    .order .form-box .form-box__order {
+        width: 100%;
+        padding: 30px 15px;
+    }
+    footer .footer-top .row {
+        flex-direction: column;
+    }
+    footer .socials {
+        margin: 30rem 0;
+    }
+    footer .footer-bottom .row {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 15rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .main h1 {
+        font-size: 60rem;
+        line-height: 1.2;
+    }
+    .main h2 {
+        font-size: 40rem;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    html {
+        font-size: .6px;
+    }
+}
